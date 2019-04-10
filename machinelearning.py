@@ -6,22 +6,23 @@ from sklearn.linear_model import LogisticRegression
 
 def main():
     CodedPasswords = []
-    file = open("Shortpws.txt", "r")
+    file = open("passwords.txt", "r")
+    #line = file.readline()
     for line in file:
         #print "crap"
         TSS = []
-        line = file.readline()
-        cnt = 1
-        while line:
-            print("Line {}: {}".format(cnt, line.strip()))
-            strength, improvements = passwordmeter.test(line)
-            print(int (strength*100))
-            print(cnt)
+        #line = file.readline()
+        cnt = 0 
+        #while line:
+        #print("Line {}: {}".format(cnt, line.strip()))
+        strength, improvements = passwordmeter.test(line)
+        #print(int (strength*100))
+        #print(cnt)
             #print("Strength: ".strenth)
-            cnt += 1
-            TSS.append(line)
-            TSS.append(strength)
-            CodedPasswords.append(TSS)
+        cnt += 1
+        TSS.append(line)
+        TSS.append(strength)
+        CodedPasswords.append(TSS)
     print(CodedPasswords)
 
 if __name__ == "__main__":
