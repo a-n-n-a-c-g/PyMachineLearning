@@ -24,7 +24,7 @@ def main():
         TSS.append(line)
         PWs.append(line)
         TSS.append(strength*100)
-        STRENGTHs.append(strength*100)
+        STRENGTHs.append(int(round(strength*100)))
        # TSS.append(strength)
         CodedPasswords.append(TSS)
     print(CodedPasswords)
