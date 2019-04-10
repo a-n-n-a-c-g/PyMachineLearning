@@ -13,21 +13,19 @@ def getTokens(inputString):
 def main():
     CodedPasswords = []
     file = open("Shortpws.txt", "r")
+<<<<<<< HEAD
     #line = file.readline()
+=======
+>>>>>>> a36cb46d67e50870c0a3cc4d584fec4273ff3982
     for line in file:
-        #print "crap"
+        line=line.rstrip("\n")
         TSS = []
-        #line = file.readline()
         cnt = 0 
-        #while line:
-        #print("Line {}: {}".format(cnt, line.strip()))
         strength, improvements = passwordmeter.test(line)
-        #print(int (strength*100))
-        #print(cnt)
-            #print("Strength: ".strenth)
         cnt += 1
         TSS.append(line)
-        TSS.append(strength)
+        TSS.append(strength*100)
+       # TSS.append(strength)
         CodedPasswords.append(TSS)
     print(CodedPasswords)
 
