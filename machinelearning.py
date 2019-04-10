@@ -4,9 +4,15 @@ from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.model_selection import train_test_split
 from sklearn.linear_model import LogisticRegression
 
+def getTokens(inputString):
+    tokens = []
+    for i in inputString:
+        tokens.append(i)
+    return tokens
+
 def main():
     CodedPasswords = []
-    file = open("passwords.txt", "r")
+    file = open("Shortpws.txt", "r")
     #line = file.readline()
     for line in file:
         #print "crap"
