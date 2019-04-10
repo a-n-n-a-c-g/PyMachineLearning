@@ -15,10 +15,6 @@ def main():
     PWs = []
     STRENGTHs = []
     file = open("Shortpws.txt", "r")
-#<<<<<<< HEAD
-    #line = file.readline()
-#=======
-#>>>>>>> a36cb46d67e50870c0a3cc4d584fec4273ff3982
     for line in file:
         line=line.rstrip("\n")
         TSS = []
