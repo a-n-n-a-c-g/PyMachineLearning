@@ -6,11 +6,11 @@ from sklearn.linear_model import LogisticRegression
 
 def main():
     CodedPasswords = []
-        file = open("Shortpws.txt, "r")
-        for line in file:
-                #print "crap"
+    file = open("Shortpws.txt", "r")
+    for line in file:
+        #print "crap"
         TSS = []
-        line = fp.readline()
+        line = file.readline()
         cnt = 1
         while line:
             print("Line {}: {}".format(cnt, line.strip()))
