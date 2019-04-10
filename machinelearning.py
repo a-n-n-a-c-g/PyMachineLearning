@@ -6,15 +6,16 @@ from sklearn.linear_model import LogisticRegression
 
 def main():
     CodedPasswords = []
-    file = open("passwords.txt", "r")
+    file = open("Shortpws.txt", "r")
     for line in file:
-        line.rstrip("\n");
+        line=line.rstrip("\n")
         TSS = []
         cnt = 0 
         strength, improvements = passwordmeter.test(line)
         cnt += 1
         TSS.append(line)
         TSS.append(strength*100)
+       # TSS.append(strength)
         CodedPasswords.append(TSS)
     print(CodedPasswords)
 
